@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-  pull_request: {}
 
 env:
   IMAGE_NAME: "my-awesome-app"
