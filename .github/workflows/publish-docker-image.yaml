@@ -4,6 +4,13 @@ on:
     branches:
       - main
 
+env:
+  IMAGE_NAME: "my-awesome-app"
+
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   publish:
     name: "Build and publish Docker image"
@@ -30,8 +37,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            fernandoarteaga/${{ inputs.image-name }}
-            ghcr.io/${{ github.repository }}/${{ inputs.image-name }}
+            fernandoarteaga/${{ env.IMAGE_NAME }}
+            ghcr.io/${{ github.repository }}/${{ env.IMAGE_NAME }}
           flavor: |
             latest=auto
           tags: |
