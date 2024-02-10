@@ -8,6 +8,10 @@ on:
 env:
   IMAGE_NAME: "my-awesome-app"
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   publish:
     name: "Build and publish Docker image"
