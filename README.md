@@ -12,4 +12,4 @@ Here you can find several examples and guides on some fundamental DevOps concept
 * Kubernetes Manifests
 * Terraform
 * Helm Charts
-* [CI/CD](./.github)
+* [CI/CD](./.github/workflows/README.md)
