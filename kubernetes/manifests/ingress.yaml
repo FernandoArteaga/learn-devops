@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-awesome-app-manifest
+  labels:
+    app.kubernetes.io/name: my-awesome-app
+    app.kubernetes.io/managed-by: manifest
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /my-awesome-app
+            pathType: Prefix
+            backend:
+              service:
+                name: my-awesome-app
+                port:
+                  number: 80
+                
