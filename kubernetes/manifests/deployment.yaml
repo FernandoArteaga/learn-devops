@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: fernandoarteaga/my-awesome-app:latest
+          image: fernandoarteaga/my-awesome-app:latest # Replace with your image
           ports:
             - name: http
               containerPort: 80

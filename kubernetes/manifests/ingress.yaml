@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-awesome-app
+  name: my-awesome-app-manifest
   labels:
     app.kubernetes.io/name: my-awesome-app
     app.kubernetes.io/managed-by: manifest
