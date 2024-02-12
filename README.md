@@ -9,7 +9,7 @@ Here you can find several examples and guides on some fundamental DevOps concept
 
 * [Docker](./my-awesome-app/README.md)
 * [Docker compose](./my-awesome-app/README.md#docker-compose)
-* Kubernetes Manifests
-* Terraform
+* [Kubernetes Manifests](./kubernetes/README.md)
+* [Terraform](./terraform/README.md)
 * Helm Charts
 * [CI/CD](./.github/workflows/README.md)

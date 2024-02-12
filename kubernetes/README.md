@@ -22,7 +22,8 @@ and an [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress
 ### Create the resources
 
 Before creating the resources, we need to have the `kubectl` command-line tool installed and a Kubernetes cluster running.
-For this demo, you can choose to use a [local Kubernetes cluster](#local-kubernetes-cluster) or a cloud provider like [AWS (EKS)](https://aws.amazon.com/eks/).
+For this demo, you can choose to use a [local Kubernetes cluster](#local-kubernetes-cluster) or a [cloud provider](../terraform/README.md#provision-the-infrastructure)
+like AWS or GCP.
 
 Once you have the Kubernetes cluster running, you can create the resources by following the steps below.
 1. Create a namespace named `learn-devops`, where we will deploy the resources
