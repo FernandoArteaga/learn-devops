@@ -119,3 +119,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+terraform/**/.terraform
+terraform/**/tfplan
+terraform/**/*.tfstate.backup
