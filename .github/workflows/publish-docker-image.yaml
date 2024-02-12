@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "my-awesome-app/**"
 
 env:
   IMAGE_NAME: "my-awesome-app"
