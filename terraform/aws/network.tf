@@ -76,7 +76,7 @@ resource "aws_route_table" "public" {
 
 # Associate the public subnet with the public route table
 resource "aws_route_table_association" "internet_access" {
-  count = length(var.availability_zones)
+  count          = length(var.availability_zones)
   subnet_id      = aws_subnet.public_subnet[count.index].id
   route_table_id = aws_route_table.public.id
 

@@ -1,6 +1,8 @@
 name: "Check Terraform files"
 on:
-  pull_request: {}
+  pull_request:
+    paths:
+      - "terraform/**"
 
 jobs:
   check:

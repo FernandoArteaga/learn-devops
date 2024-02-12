@@ -1,6 +1,8 @@
 name: "Check Docker build"
 on:
-  pull_request: {}
+  pull_request:
+    paths:
+      - "my-awesome-app/**"
 
 jobs:
   build:
