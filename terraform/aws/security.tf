@@ -14,9 +14,9 @@
 #  from_port         = 443
 #  to_port           = 443
 #  protocol          = "tcp"
-#  cidr_blocks = [
-#    aws_subnet.public_subnet.cidr_block,
-#  ]
+#  cidr_blocks = concat(
+#    aws_subnet.public_subnet[*].cidr_block,
+#  )
 #
 #  depends_on = [
 #    aws_subnet.public_subnet,
@@ -29,9 +29,9 @@
 #  from_port         = 80
 #  to_port           = 80
 #  protocol          = "tcp"
-#  cidr_blocks = [
-#    aws_subnet.public_subnet.cidr_block,
-#  ]
+#  cidr_blocks = concat(
+#    aws_subnet.public_subnet[*].cidr_block,
+#  )
 #
 #  depends_on = [
 #    aws_subnet.public_subnet,
@@ -45,9 +45,9 @@
 #  from_port         = 0
 #  to_port           = 0
 #  protocol          = "-1"
-#  cidr_blocks = [
-#    aws_subnet.public_subnet.cidr_block,
-#  ]
+#  cidr_blocks = concat(
+#    aws_subnet.public_subnet[*].cidr_block,
+#  )
 #
 #  depends_on = [
 #    aws_subnet.public_subnet,
@@ -71,10 +71,10 @@
 #  from_port         = 0
 #  to_port           = 65535
 #  protocol          = "-1"
-#  cidr_blocks = [
-#    aws_subnet.private_subnet.cidr_block,
-#    aws_subnet.public_subnet.cidr_block,
-#  ]
+#  cidr_blocks = concat(
+#    aws_subnet.public_subnet[*].id,
+#    aws_subnet.private_subnet[*].id
+#  )
 #
 #  depends_on = [
 #    aws_subnet.private_subnet,
@@ -89,9 +89,9 @@
 #  from_port         = 1025
 #  to_port           = 65535
 #  protocol          = "tcp"
-#  cidr_blocks = [
-#    aws_subnet.private_subnet.cidr_block,
-#  ]
+#  cidr_blocks = concat(
+#    aws_subnet.private_subnet[*].cidr_block,
+#  )
 #
 #  depends_on = [
 #    aws_subnet.private_subnet,
@@ -124,10 +124,10 @@
 #  from_port         = 0
 #  to_port           = 65535
 #  protocol          = "tcp"
-#  cidr_blocks = [
-#    aws_subnet.private_subnet.cidr_block,
-#    aws_subnet.public_subnet.cidr_block,
-#  ]
+#  cidr_blocks = concat(
+#    aws_subnet.public_subnet[*].id,
+#    aws_subnet.private_subnet[*].id
+#  )
 #
 #  depends_on = [
 #    aws_subnet.private_subnet,
